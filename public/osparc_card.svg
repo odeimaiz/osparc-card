@@ -9,6 +9,6 @@
   <text id="title" y="30" x="15" font-weight="bold" font-size="14" fill="#bfbfbf" font-family="Helvetica, Arial, sans-serif">Study_Title</text>
   <text id="description" y="50" x="15" font-size="13" fill="#bfbfbf" font-family="Helvetica, Arial, sans-serif" >Study_Description</text>
   <!-- <rect id="thumbnail" y="75" x="15" height="130" width="160" fill="#bfbfbf"/> -->
-  <image id="thumbnail" y="75" x="15" height="130" width="160" href="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" />
+  <image id="thumbnail" y="75" x="15" height="130" width="160" href="https://osparc.io/osparc/../resource/osparc/osparc-white.svg" />
  </g>
 </svg>

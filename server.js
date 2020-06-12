@@ -1,11 +1,13 @@
+// node server.js
+// http://localhost:8080/card?title=Welcome&description=To%20oSPARC
+
 const express = require('express');
 const app = express();
 const fs = require('fs');
 const svgTools = require('@iconify/tools');
 
 app.get('/card', (req, res) => {
-  https://raw.githubusercontent.com/pcrespov/osparc-sample-studies/master/Sleepers%20A%20lot/project.json
-
+  "https://raw.githubusercontent.com/pcrespov/osparc-sample-studies/master/Sleepers%20A%20lot/project.json"
   const title = req.query.title;
   console.log("title", title);
   const description = req.query.description;
