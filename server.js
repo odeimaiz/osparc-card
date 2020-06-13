@@ -36,7 +36,6 @@ app.get('/card_custom', (req, res) => {
 });
 
 app.get('/card', (req, res) => {
-  // const url = "https://raw.githubusercontent.com/pcrespov/osparc-sample-studies/master/Sleepers%20A%20lot/project.json";
   const url = req.query.studyUrl;
   const reqStudy = https.get(url, (resProject) => {
     let data = '';
@@ -46,7 +45,7 @@ app.get('/card', (req, res) => {
     resProject.on('end', () => {
       const json_data = JSON.parse(data);
       const title = json_data["name"];
-      console.log("Generating ", title);
+      console.log("Generating:", title);
       const description = json_data["description"];
       const thumbnail = json_data["thumbnail"];
       sendCustomCard(res, title, description, thumbnail);
