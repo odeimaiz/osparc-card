@@ -6,9 +6,10 @@ const app = express();
 const https = require('https');
 const svgTools = require('@iconify/tools');
 
+const card_path = "C:/Develop/oSPARC_card/public/osparc_card.svg";
+const new_card_path = "C:/Develop/oSPARC_card/public/osparc_card_custom.svg";
+
 const sendCustomCard = (res, title, description, thumbnail) => {
-  const card_path = "C:/Develop/oSPARC_card/public/osparc_card.svg";
-  const new_card_path = "C:/Develop/oSPARC_card/public/osparc_card_custom.svg";
   svgTools.ImportSVG(card_path)
     .then(svg => {
       let newSVG = svg.toString();
@@ -30,6 +31,10 @@ const sendCustomCard = (res, title, description, thumbnail) => {
     });
 };
 
+app.get('/card_custom', (req, res) => {
+  res.sendFile(new_card_path);
+});
+
 app.get('/card', (req, res) => {
   // const url = "https://raw.githubusercontent.com/pcrespov/osparc-sample-studies/master/Sleepers%20A%20lot/project.json";
   const url = req.query.studyUrl;
@@ -41,7 +46,7 @@ app.get('/card', (req, res) => {
     resProject.on('end', () => {
       const json_data = JSON.parse(data);
       const title = json_data["name"];
-      console.log("title", title);
+      console.log("Generating ", title);
       const description = json_data["description"];
       const thumbnail = json_data["thumbnail"];
       sendCustomCard(res, title, description, thumbnail);
