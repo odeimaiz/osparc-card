@@ -1,9 +1,8 @@
 // node server.js
-// http://localhost:8080/card?title=Welcome&description=To%20oSPARC
+// http://localhost:8080/card?studyUrl=https://raw.githubusercontent.com/pcrespov/osparc-sample-studies/master/Sleepers%20A%20lot/project.json
 
 const express = require('express');
 const app = express();
-const fs = require('fs');
 const https = require('https');
 const svgTools = require('@iconify/tools');
 
