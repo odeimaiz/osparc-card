@@ -19,6 +19,6 @@
   "homepage": "https://github.com/odeimaiz/osparc-card#readme",
   "dependencies": {
     "@iconify/tools": "^1.3.13",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
